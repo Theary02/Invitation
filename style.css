@@ -1,0 +1,165 @@
+/* =========================
+   RESET
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   KHMER FONTS
+========================= */
+@font-face {
+    font-family: 'KhmerOSMuolLight';
+    src: url('fonts/KhmerOSMuolLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'KhmerOSBokor';
+    src: url('fonts/KhmerOSBokor.ttf') format('truetype');
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Noto Serif Khmer', 'KhmerOSBokor', serif; /* main text */
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.container {
+    background: #fffdf8; /* wedding paper look */
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /* center everything inside container */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.invite-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title {
+    font-family: 'Noto Serif Khmer', 'KhmerOSMuolLight', serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   DATE
+========================= */
+.date {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   TIME BLOCKS & AGENDA
+========================= */
+h2, h3 {
+    font-family: 'Noto Serif Khmer', 'KhmerOSMuolLight', serif;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.time-block {
+    margin-bottom: 12px;
+    line-height: 2;
+}
+
+.agenda-page {
+    text-align: center;
+    background: url('images/rings.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 30px 15px;
+    border-radius: 12px;
+}
+
+.agenda-list {
+    margin: 0 auto 15px; /* center the list */
+    padding-left: 0; /* remove default indent */
+    list-style-position: inside;
+    line-height: 2;
+    text-align: center; /* center list items */
+}
+
+.agenda-list li {
+    margin-bottom: 6px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #8b6b3e; /* traditional gold-brown */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #6f5430;
+}
+
+/* SECONDARY BUTTON */
+.secondary {
+    background: #457b9d;
+}
+
+.secondary:hover {
+    background: #1d3557;
+}
+
+/* BACK LINK */
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #555;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+    }
+}
