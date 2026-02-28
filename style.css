@@ -8,23 +8,10 @@
 }
 
 /* =========================
-   KHMER FONTS
-========================= */
-@font-face {
-    font-family: 'KhmerOSMuolLight';
-    src: url('fonts/KhmerOSMuolLight.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'KhmerOSBokor';
-    src: url('fonts/KhmerOSBokor.ttf') format('truetype');
-}
-
-/* =========================
    BODY
 ========================= */
 body {
-    font-family: 'Noto Serif Khmer', 'KhmerOSBokor', serif; /* main text */
+    font-family: 'Noto Serif Khmer', serif; /* main text */
     background: #f9f9f9;
     display: flex;
     justify-content: center;
@@ -40,7 +27,7 @@ body {
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    text-align: center; /* center everything inside container */
+    text-align: center;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
@@ -54,13 +41,23 @@ body {
 }
 
 /* =========================
-   TITLE
+   TITLES & HEADINGS
 ========================= */
+.title,
+h2,
+h3 {
+    font-family: 'Moul', serif;
+    letter-spacing: 1px;
+}
+
 .title {
-    font-family: 'Noto Serif Khmer', 'KhmerOSMuolLight', serif;
     font-size: 24px;
     margin-bottom: 8px;
-    letter-spacing: 1px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 /* =========================
@@ -70,42 +67,60 @@ body {
     font-size: 15px;
     color: #666;
     margin-bottom: 15px;
+     font-family: 'Moul', serif;
 }
 
 /* =========================
    TIME BLOCKS & AGENDA
 ========================= */
-h2, h3 {
-    font-family: 'Noto Serif Khmer', 'KhmerOSMuolLight', serif;
-}
-
-h3 {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
 .time-block {
     margin-bottom: 12px;
     line-height: 2;
+     font-family: 'Moul', serif;
 }
 
+/* =========================
+   AGENDA PAGE WITH BLURRED BACKGROUND
+========================= */
 .agenda-page {
+    position: relative;
+    font-family: 'Moul', serif;
     text-align: center;
     background: url('images/rings.jpg') no-repeat center center;
     background-size: cover;
     padding: 30px 15px;
     border-radius: 12px;
+    overflow: hidden; /* ensures blur overlay stays inside container */
+}
+
+/* Blur and transparency overlay */
+.agenda-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(251, 239, 236, 0.6); /* semi-transparent white */
+    backdrop-filter: blur(2px); /* blur effect */
+    -webkit-backdrop-filter: blur(2px); /* Safari support */
+    z-index: 1;
+}
+
+/* Keep text above overlay */
+.agenda-page > * {
+    position: relative;
+    z-index: 2;
 }
 
 .agenda-list {
-    margin: 0 auto 15px; /* center the list */
-    padding-left: 0; /* remove default indent */
+    margin: 0 auto 15px;
+    padding-left: 0;
     list-style-position: inside;
     line-height: 2;
-    text-align: center; /* center list items */
+    text-align: left;
+    font-family: 'Moul', serif;
 }
 
 .agenda-list li {
+    font-family: 'Moul', serif;
     margin-bottom: 6px;
 }
 
@@ -124,13 +139,14 @@ hr {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #8b6b3e; /* traditional gold-brown */
+    background: #8b6b3e;
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-size: 16px;
     transition: 0.3s;
     text-align: center;
+    font-family: 'Noto Serif Khmer', serif;
 }
 
 .btn:hover {
@@ -153,6 +169,7 @@ hr {
     color: #555;
     text-decoration: none;
     text-align: center;
+    font-family: 'Noto Serif Khmer', serif;
 }
 
 /* =========================
